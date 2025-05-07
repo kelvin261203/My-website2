@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Carmona | FullStack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url("/Tareas/images/cielo.jpg") fixed center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+       /* Header */
+#header {
+    background: rgba(0, 0, 0, 0.788);
+    width: 100%; 
+    padding: 10px;
+    text-align: center;
+    position: fixed; 
+    top: 0; /* Pegado a la parte superior */
+    left: 0; /* Aseguramos que comience desde la izquierda */
+    z-index: 1000; /* Alto z-index para que esté sobre otros elementos */
+    font-size: 37px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+}
+
+.subtitulo-header {
+    font-size: 0.5em;
+    display: block;
+}
+
+/* navegador */
+#navegador {
+    background: rgba(0, 0, 0, 0.799);
+    width: 42%; 
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    position: absolute; 
+    top: 109px; /* Cambiado para que quede debajo del header */
+    left: 450px;
+    z-index: 999; /* Un poco menos que el header para que no se superponga */
+    font-size: 20px; /* Reducido para diferenciarse del header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+    color: white;
+    border-radius: 25px;
+}
+
+/* Eliminar subrayado de los enlaces dentro del navegador */
+#navegador a {
+    text-decoration: none;
+    color: white;
+    padding: 0 35px; /* Espaciado entre enlaces */
+}
+
+        /* Sección principal destacada */
+        .contenedor-secciones {
+            width: 90%;
+            max-width: 1200px;
+            margin: 180px auto 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .seccion {
+            background-color: rgba(11, 10, 10, 0.719);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(13, 13, 13, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .seccion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .imagen-seccion {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* border: 3px solid rgba(255,255,255,0.1); */
+            flex-shrink: 0;
+        }
+
+        .texto-seccion p {
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+/* Footer */
+#footer {
+    background-color: rgba(11, 10, 10, 0.719);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+    </style>
+
+</head>
+<body>
+
+    <header id="header">
+        Kelvin Carmona
+        <span class="subtitulo-header">FullStack Developer</span>
+    </header>
+    
+    <nav id="navegador">
+        <a href="tarea22.html">Inicio</a>
+        <a href="tarea2.html">Datos Personales</a>
+        <a href="tarea23.html">Pasatiempo</a>
+        <a href="tarea21.html">Contacto</a>
+    </nav>
+
+    <section class="contenedor-secciones">
+        <div class="seccion">
+            <img src="\Tareas\images\foto1.jpg" alt="Foto Personal" class="imagen-seccion">
+            <div class="texto-seccion">
+                <h2 style="font-size: 2rem; margin-bottom: 20px; color: #eff4f1;">¡Hola! Soy Kelvin Carmona</h2>
+                <p>Estudiante de sistemas en la O&M, apasionado por la tecnología y en camino a convertirme en FullStack Developer. Actualmente trabajo en Horatio en servicio al cliente, pero mi verdadera pasión es el mundo de IT.</p>
+                <p>Cuando no estoy programando, me encontrarás en el gimnasio, disfrutando de sushi o explorando la naturaleza. Como buen Capricornio, me encanta el senderismo y descubrir nuevos lugares alrededor del mundo.</p>
+                <p>Soy una persona enfocada, curiosa y siempre en busca de crecimiento tanto personal como profesional. Mi objetivo es combinar mi pasión por la tecnología con mi amor por la creatividad y la resolución de problemas.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer">
+        <p style="opacity: 0.8;">© 2023 Kelvin Carmona. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="blog.js"></script>
+</body>
+</html>

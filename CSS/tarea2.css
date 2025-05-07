@@ -1,0 +1,236 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------------*/
+
+body {
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: url("/Tareas/images/cielo.jpg") fixed center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+#header {
+    background: rgba(0, 0, 0, 0.788);
+    width: 100%; 
+    padding: 10px;
+    text-align: center;
+    position: fixed; 
+    top: 0; /* Pegado a la parte superior */
+    left: 0; /* Aseguramos que comience desde la izquierda */
+    z-index: 1000; /* Alto z-index para que esté sobre otros elementos */
+    font-size: 37px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+}
+
+.subtitulo-header {
+    font-size: 0.5em;
+    display: block;
+}
+
+/* navegador */
+#navegador {
+    background: rgba(0, 0, 0, 0.799);
+    width: 42%; 
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    position: absolute; 
+    top: 124px; /* Cambiado para que quede debajo del header */
+    left: 450px;
+    z-index: 999; /* Un poco menos que el header para que no se superponga */
+    font-size: 20px; /* Reducido para diferenciarse del header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+    color: white;
+    border-radius: 25px;
+}
+
+/* Eliminar subrayado de los enlaces dentro del navegador */
+#navegador a {
+    text-decoration: none;
+    color: white;
+    padding: 0 35px; /* Espaciado entre enlaces */
+}
+
+/* Secciones */
+.contenedor-secciones {
+    width: 70%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 200px;
+}
+
+.seccion {
+    background-color: rgba(11, 10, 10, 0.719);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(13, 13, 13, 0.251);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.imagen-seccion {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.texto-seccion p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+#footer {
+    background-color: rgba(11, 10, 10, 0.719);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+
+/*---------------------*/
+
+.SM {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.SM a {
+    color: white;
+  text-decoration: none;
+}
+
+/* página datos personales */
+body.pagina-datos-personales .seccion {
+    transition: transform 0.3s ease; /* Agrega esta línea */
+}
+
+body.pagina-datos-personales .seccion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Opcional: mejora el efecto */
+}
+
+
+
+/* ------------------------------------- */
+/* página de pasatiempos */
+body.pagina-pasatiempo .contenedor-secciones {
+    width: 90%;
+    max-width: 1200px;
+    margin: 195px auto 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.pagina-pasatiempo .seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 120%;
+    align-items: center;
+}
+
+/* Contenedor de imágenes */
+body.pagina-pasatiempo .contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+/* Estilos base de las imágenes */
+body.pagina-pasatiempo .imagen-seccion {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+/* Efecto hover SOLO para las imágenes */
+body.pagina-pasatiempo .imagen-seccion:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Texto justificado */
+body.pagina-pasatiempo .texto-seccion {
+    width: 90%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+body.pagina-pasatiempo .texto-seccion p {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+
+/* PÁGINA DE CONTACTO */
+
+body.pagina-contacto .contenedor-secciones {
+    width: 80%;
+    max-width: 800px;
+}
+
+body.pagina-contacto .seccion {
+    flex-direction: column;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+/* Estilos para los elementos de contacto */
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(11, 10, 10, 0.404);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px);
+}
+
+.icono-contacto {
+    font-size: 1.8rem;
+    color: #fdfdfd;
+    min-width: 40px;
+}
+
+.dato-contacto {
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
